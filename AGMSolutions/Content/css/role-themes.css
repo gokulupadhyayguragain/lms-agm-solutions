@@ -1,0 +1,497 @@
+/* AGM Solutions LMS - Role-Based Dynamic Theming System */
+/* Implements Sky Blue, Light Green, and Light Yellow themes as per system requirements */
+
+/* ============================================= */
+/* CSS CUSTOM PROPERTIES (CSS Variables) */
+/* ============================================= */
+
+:root {
+    /* Default/Base Colors */
+    --base-primary: #3498db;
+    --base-secondary: #2c3e50;
+    --base-success: #27ae60;
+    --base-danger: #e74c3c;
+    --base-warning: #f39c12;
+    --base-info: #17a2b8;
+    --base-light: #f8f9fa;
+    --base-dark: #343a40;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+    --gradient-light: linear-gradient(135deg, var(--theme-light) 0%, #ffffff 100%);
+    
+    /* Spacing and Sizing */
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --box-shadow-hover: 0 4px 8px rgba(0,0,0,0.15);
+    --transition: all 0.3s ease;
+}
+
+/* ============================================= */
+/* STUDENT THEME - Sky Blue (#87CEEB) */
+/* ============================================= */
+
+.student-theme {
+    --theme-primary: #87CEEB;
+    --theme-primary-dark: #5F9EA0;
+    --theme-secondary: #4682B4;
+    --theme-light: #E0F6FF;
+    --theme-accent: #00BFFF;
+    --theme-text: #2F4F4F;
+    --theme-hover: #77BEDb;
+}
+
+.student-theme .navbar,
+.student-theme .bg-primary {
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%) !important;
+    border-bottom: 3px solid #5F9EA0;
+}
+
+.student-theme .btn-primary {
+    background: var(--theme-primary);
+    border-color: var(--theme-primary-dark);
+    color: #ffffff;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.student-theme .btn-primary:hover {
+    background: var(--theme-hover);
+    border-color: var(--theme-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.student-theme .card {
+    border: 2px solid #B0E0E6;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.student-theme .card:hover {
+    border-color: var(--theme-primary);
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.student-theme .card-header {
+    background: var(--theme-light);
+    border-bottom: 2px solid var(--theme-primary);
+    color: var(--theme-text);
+    font-weight: 600;
+}
+
+.student-theme .alert-info {
+    background-color: var(--theme-light);
+    border-color: var(--theme-primary);
+    color: var(--theme-text);
+}
+
+/* Fix for all alert types visibility in student theme */
+.student-theme .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.student-theme .alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeaa7;
+    color: #856404;
+}
+
+.student-theme .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.student-theme .badge-primary {
+    background-color: var(--theme-primary);
+}
+
+.student-theme .progress-bar {
+    background: var(--gradient-primary);
+}
+
+/* Student Portal Specific Elements */
+.student-theme .dashboard-card {
+    background: linear-gradient(135deg, #E0F6FF 0%, #F0F8FF 100%);
+    border-left: 5px solid var(--theme-primary);
+}
+
+.student-theme .quiz-card {
+    border: 2px solid var(--theme-primary);
+    background: var(--theme-light);
+}
+
+.student-theme .assignment-status.pending {
+    color: var(--theme-primary);
+    background: rgba(135, 206, 235, 0.1);
+}
+
+/* ============================================= */
+/* LECTURER THEME - Light Green (#90EE90) */
+/* ============================================= */
+
+.lecturer-theme {
+    --theme-primary: #90EE90;
+    --theme-primary-dark: #32CD32;
+    --theme-secondary: #228B22;
+    --theme-light: #F0FFF0;
+    --theme-accent: #00FF7F;
+    --theme-text: #006400;
+    --theme-hover: #80DD80;
+}
+
+.lecturer-theme .navbar,
+.lecturer-theme .bg-primary {
+    background: linear-gradient(135deg, #90EE90 0%, #32CD32 100%) !important;
+    border-bottom: 3px solid #228B22;
+}
+
+.lecturer-theme .btn-primary {
+    background: var(--theme-primary);
+    border-color: var(--theme-primary-dark);
+    color: #ffffff;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.lecturer-theme .btn-primary:hover {
+    background: var(--theme-hover);
+    border-color: var(--theme-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.lecturer-theme .card {
+    border: 2px solid #98FB98;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.lecturer-theme .card:hover {
+    border-color: var(--theme-primary);
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.lecturer-theme .card-header {
+    background: var(--theme-light);
+    border-bottom: 2px solid var(--theme-primary);
+    color: var(--theme-text);
+    font-weight: 600;
+}
+
+.lecturer-theme .alert-success {
+    background-color: var(--theme-light);
+    border-color: var(--theme-primary);
+    color: var(--theme-text);
+}
+
+/* Fix for all alert types visibility in lecturer theme */
+.lecturer-theme .alert-info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+.lecturer-theme .alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeaa7;
+    color: #856404;
+}
+
+.lecturer-theme .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.lecturer-theme .badge-success {
+    background-color: var(--theme-primary);
+}
+
+.lecturer-theme .progress-bar {
+    background: var(--gradient-primary);
+}
+
+/* Lecturer Portal Specific Elements */
+.lecturer-theme .dashboard-card {
+    background: linear-gradient(135deg, #F0FFF0 0%, #F5FFFA 100%);
+    border-left: 5px solid var(--theme-primary);
+}
+
+.lecturer-theme .course-card {
+    border: 2px solid var(--theme-primary);
+    background: var(--theme-light);
+}
+
+.lecturer-theme .student-grade.excellent {
+    color: var(--theme-primary-dark);
+    background: rgba(144, 238, 144, 0.1);
+}
+
+/* ============================================= */
+/* ADMIN THEME - Light Yellow (#FFFFE0) */
+/* ============================================= */
+
+.admin-theme {
+    --theme-primary: #FFFFE0;
+    --theme-primary-dark: #FFD700;
+    --theme-secondary: #FFA500;
+    --theme-light: #FFFAF0;
+    --theme-accent: #FFFF00;
+    --theme-text: #8B4513;
+    --theme-hover: #FFFFD0;
+}
+
+.admin-theme .navbar,
+.admin-theme .bg-primary {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    border-bottom: 3px solid #FF8C00;
+    color: #8B4513 !important;
+}
+
+.admin-theme .navbar-brand,
+.admin-theme .navbar-nav .nav-link {
+    color: #8B4513 !important;
+    font-weight: 600;
+}
+
+.admin-theme .btn-primary {
+    background: var(--theme-primary-dark);
+    border-color: var(--theme-secondary);
+    color: var(--theme-text);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.admin-theme .btn-primary:hover {
+    background: var(--theme-secondary);
+    border-color: var(--theme-primary-dark);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.admin-theme .card {
+    border: 2px solid #F0E68C;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.admin-theme .card:hover {
+    border-color: var(--theme-primary-dark);
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.admin-theme .card-header {
+    background: var(--theme-light);
+    border-bottom: 2px solid var(--theme-primary-dark);
+    color: var(--theme-text);
+    font-weight: 600;
+}
+
+.admin-theme .alert-warning {
+    background-color: var(--theme-light);
+    border-color: var(--theme-primary-dark);
+    color: var(--theme-text);
+}
+
+/* Fix for all alert types visibility in admin theme */
+.admin-theme .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.admin-theme .alert-info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+.admin-theme .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.admin-theme .badge-warning {
+    background-color: var(--theme-primary-dark);
+    color: var(--theme-text);
+}
+
+.admin-theme .progress-bar {
+    background: var(--gradient-primary);
+}
+
+/* Admin Portal Specific Elements */
+.admin-theme .dashboard-card {
+    background: linear-gradient(135deg, #FFFAF0 0%, #FFF8DC 100%);
+    border-left: 5px solid var(--theme-primary-dark);
+}
+
+.admin-theme .system-status.healthy {
+    color: var(--theme-secondary);
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.admin-theme .user-management-card {
+    border: 2px solid var(--theme-primary-dark);
+    background: var(--theme-light);
+}
+
+/* ============================================= */
+/* DYNAMIC THEME APPLICATION */
+/* ============================================= */
+
+/* Theme Detection and Auto-Application */
+body[data-user-role="Student"] {
+    background: linear-gradient(135deg, #F0F8FF 0%, #E0F6FF 100%);
+}
+
+body[data-user-role="Lecturer"] {
+    background: linear-gradient(135deg, #F5FFFA 0%, #F0FFF0 100%);
+}
+
+body[data-user-role="Admin"] {
+    background: linear-gradient(135deg, #FFFAF0 0%, #FFF8DC 100%);
+}
+
+/* ============================================= */
+/* ENHANCED UI COMPONENTS */
+/* ============================================= */
+
+/* Modern Button Enhancements */
+.btn-theme {
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-theme:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: var(--transition);
+}
+
+.btn-theme:hover:before {
+    left: 100%;
+}
+
+/* Enhanced Card Components */
+.theme-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+}
+
+.theme-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+/* Role-Specific Icons */
+.student-theme .role-icon:before { content: "🎓"; }
+.lecturer-theme .role-icon:before { content: "👨‍🏫"; }
+.admin-theme .role-icon:before { content: "🛡️"; }
+
+/* Enhanced Form Controls */
+.form-control:focus {
+    border-color: var(--theme-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--theme-primary), 0.25);
+}
+
+/* ============================================= */
+/* RESPONSIVE THEME ADJUSTMENTS */
+/* ============================================= */
+
+@media (max-width: 768px) {
+    .theme-card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-theme {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .dashboard-card {
+        padding: 1rem;
+    }
+}
+
+/* ============================================= */
+/* ANIMATION ENHANCEMENTS */
+/* ============================================= */
+
+@keyframes themeGlow {
+    0% { box-shadow: 0 0 5px var(--theme-primary); }
+    50% { box-shadow: 0 0 20px var(--theme-primary); }
+    100% { box-shadow: 0 0 5px var(--theme-primary); }
+}
+
+.theme-highlight {
+    animation: themeGlow 2s ease-in-out infinite;
+}
+
+/* ============================================= */
+/* UTILITY CLASSES */
+/* ============================================= */
+
+.text-theme { color: var(--theme-primary) !important; }
+.bg-theme { background-color: var(--theme-primary) !important; }
+.border-theme { border-color: var(--theme-primary) !important; }
+
+/* Theme-specific text colors */
+.student-theme .text-primary { color: #87CEEB !important; }
+.lecturer-theme .text-success { color: #90EE90 !important; }
+.admin-theme .text-warning { color: #FFD700 !important; }
+
+/* ============================================= */
+/* JAVASCRIPT THEME SWITCHING SUPPORT */
+/* ============================================= */
+
+/* Classes for programmatic theme switching */
+.theme-transition {
+    transition: all 0.5s ease-in-out;
+}
+
+.theme-switching {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* ============================================= */
+/* PRINT STYLES (THEME-AWARE) */
+/* ============================================= */
+
+@media print {
+    .student-theme * { color: #000 !important; }
+    .lecturer-theme * { color: #000 !important; }
+    .admin-theme * { color: #000 !important; }
+    
+    .card, .btn { border: 1px solid #000 !important; }
+    .bg-primary, .bg-success, .bg-warning { background: #fff !important; }
+}

@@ -1,0 +1,9 @@
+﻿/* Lecturer Theme (Light green) */
+body.theme-lecturer {
+    background-color: #f0fff0; /* A very light green */
+}
+/* For example, for a lecturer-specific button style: */
+.theme-lecturer .btn-primary {
+    background-color: #32CD32; /* LimeGreen */
+    border-color: #32CD32;
+}

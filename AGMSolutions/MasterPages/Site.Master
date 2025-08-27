@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AGMSolutions.MasterPages.Site" %>
+<%@ MasterType VirtualPath="~/MasterPages/Footer.Master" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - AGM Solutions</title>
+
+    <%-- Bootstrap CSS Framework --%>
+    <link href="/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <%-- FontAwesome for Icons --%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <%-- Role-Based Dynamic Theming System --%>
+    <link href="/Content/css/role-themes.css" rel="stylesheet" />
+    <%-- Main Site Styles --%>
+    <link href="/Content/css/site.css" rel="stylesheet" />
+    
+    <%-- ContentPlaceHolder for specific page head content --%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="bodyTag" runat="server" class="dynamic-theme">
+    <form id="formMain" runat="server">
+        <%-- Dynamic Role-Specific Header Placeholder --%>
+        <div id="dynamicHeaderPlaceholder" runat="server" class="dynamic-header-container"></div> 
+        
+        <%-- Main Content Container --%>
+        <div class="container-fluid main-content-wrapper">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <%-- Dynamic Footer with Current Year --%>
+        <footer class="site-footer bg-dark text-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0">
+                            © <span id="currentYear"><%= DateTime.Now.Year %></span> AGM Solution. All rights reserved.
+                        </p>
+                        <p class="mb-0 small">
+                            <i class="fas fa-graduation-cap me-2"></i>
+                            Learning Management System - Empowering Education Through Technology
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+    
+    <%-- JavaScript Libraries --%>
+    <script src="/Scripts/jquery-3.7.0.min.js"></script>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    
+    <%-- Theme Management Script --%>
+    <script>
+        // Dynamic theme management based on user role
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get user role from body class
+            const body = document.body;
+            const role = body.getAttribute('data-user-role');
+            
+            if (role) {
+                // Apply role-specific theme class
+                body.classList.remove('student-theme', 'lecturer-theme', 'admin-theme');
+                
+                switch(role.toLowerCase()) {
+                    case 'student':
+                        body.classList.add('student-theme');
+                        break;
+                    case 'lecturer':
+                        body.classList.add('lecturer-theme');
+                        break;
+                    case 'admin':
+                        body.classList.add('admin-theme');
+                        break;
+                }
+                
+                // Update CSS custom properties for dynamic theming
+                updateThemeProperties(role);
+            }
+            
+            // Add smooth transitions for theme changes
+            body.classList.add('theme-transition');
+            
+            // Update footer year dynamically
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+        
+        function updateThemeProperties(role) {
+            const root = document.documentElement;
+            
+            switch(role.toLowerCase()) {
+                case 'student':
+                    root.style.setProperty('--dynamic-primary', '#87CEEB');
+                    root.style.setProperty('--dynamic-secondary', '#4682B4');
+                    root.style.setProperty('--dynamic-accent', '#00BFFF');
+                    break;
+                case 'lecturer':
+                    root.style.setProperty('--dynamic-primary', '#90EE90');
+                    root.style.setProperty('--dynamic-secondary', '#32CD32');
+                    root.style.setProperty('--dynamic-accent', '#00FF7F');
+                    break;
+                case 'admin':
+                    root.style.setProperty('--dynamic-primary', '#FFFFE0');
+                    root.style.setProperty('--dynamic-secondary', '#FFD700');
+                    root.style.setProperty('--dynamic-accent', '#FFA500');
+                    break;
+            }
+        }
+        
+        // Handle responsive navigation for mobile devices
+        function toggleMobileMenu() {
+            const navbar = document.querySelector('.navbar-collapse');
+            if (navbar) {
+                navbar.classList.toggle('show');
+            }
+        }
+        
+        // Add loading indicators for async operations
+        function showLoading(element) {
+            if (element) {
+                element.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+                element.disabled = true;
+            }
+        }
+        
+        function hideLoading(element, originalText) {
+            if (element) {
+                element.innerHTML = originalText;
+                element.disabled = false;
+            }
+        }
+    </script>
+    
+    <%-- ContentPlaceHolder for page-specific scripts --%>
+    <asp:ContentPlaceHolder ID="scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

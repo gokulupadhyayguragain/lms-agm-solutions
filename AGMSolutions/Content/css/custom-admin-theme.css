@@ -1,0 +1,10 @@
+﻿/* Administrator Theme (Light yellow) */
+body.theme-admin {
+    background-color: #fffacd; /* Lemon Chiffon */
+}
+/* For example, for an admin-specific button style: */
+.theme-admin .btn-primary {
+    background-color: #FFD700; /* Gold */
+    border-color: #FFD700;
+    color: #333; /* Darker text for visibility */
+}

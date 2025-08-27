@@ -1,0 +1,43 @@
+{
+  "quizTitle": "Algebra Fundamentals",
+  "totalQuestions": 5,
+  "timeLimit": 30,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "What is the value of x in the equation 2x + 5 = 15?",
+      "options": ["3", "5", "7", "10"],
+      "correct": 1
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Which of the following is equivalent to (x + 3)²?",
+      "options": ["x² + 6x + 9", "x² + 3x + 9", "x² + 6x + 6", "x² + 9"],
+      "correct": 0
+    },
+    {
+      "id": 3,
+      "type": "dragdrop",
+      "question": "Match the algebraic terms with their descriptions:",
+      "items": ["3x²", "7", "-2x", "5xy"],
+      "targets": ["Quadratic term", "Constant", "Linear term", "Product term"],
+      "correct": [0, 1, 2, 3]
+    },
+    {
+      "id": 4,
+      "type": "dropdown",
+      "question": "The slope of the line y = 3x + 2 is:",
+      "options": ["2", "3", "5", "-1"],
+      "correct": 1
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "If f(x) = 2x - 1, what is f(3)?",
+      "options": ["4", "5", "6", "7"],
+      "correct": 1
+    }
+  ]
+}

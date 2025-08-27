@@ -1,0 +1,172 @@
+{
+  "SubjectCode": "CS101",
+  "QuizTitle": "Computer Science Fundamentals Quiz",
+  "QuizDurationMinutes": 45,
+  "AttemptsAllowed": 3,
+  "OVERALLTYPE": "MIXED",
+  "Instructions": "This quiz covers fundamental concepts in Computer Science. Read each question carefully and select the best answer. You have 45 minutes to complete all questions.",
+  "Questions": [
+    {
+      "Q_ID": "Q1",
+      "QuestionText": "Which of the following is the correct way to declare a variable in Python?",
+      "TYPE": "MCQ",
+      "Options": {
+        "O1": "var x = 10",
+        "O2": "x = 10",
+        "O3": "int x = 10",
+        "O4": "declare x = 10"
+      },
+      "CorrectAnswer": "O2",
+      "Points": 5,
+      "Explanation": "In Python, variables are declared by simply assigning a value to them."
+    },
+    {
+      "Q_ID": "Q2",
+      "QuestionText": "Complete the statement: 'A _______ is a step-by-step procedure for solving a problem.'",
+      "TYPE": "DRAGDROP",
+      "Options": {
+        "O1": "Algorithm",
+        "O2": "Function",
+        "O3": "Variable",
+        "O4": "Loop"
+      },
+      "CorrectAnswer": "O1",
+      "Points": 8,
+      "Explanation": "An algorithm is defined as a step-by-step procedure for solving a problem or completing a task."
+    },
+    {
+      "Q_ID": "Q3",
+      "QuestionText": "Select all programming paradigms that Python supports:",
+      "TYPE": "DROPDOWN",
+      "Options": {
+        "O1": "Object-Oriented Programming",
+        "O2": "Functional Programming",
+        "O3": "Procedural Programming",
+        "O4": "Assembly Language"
+      },
+      "CorrectAnswers": [
+        "O1",
+        "O2",
+        "O3"
+      ],
+      "Points": 10,
+      "Explanation": "Python supports multiple programming paradigms including OOP, functional, and procedural programming. Assembly language is not a paradigm but a low-level programming language."
+    },
+    {
+      "Q_ID": "Q4",
+      "QuestionText": "What is the time complexity of searching for an element in a sorted array using binary search?",
+      "TYPE": "MCQ",
+      "Options": {
+        "O1": "O(1)",
+        "O2": "O(log n)",
+        "O3": "O(n)",
+        "O4": "O(n²)"
+      },
+      "CorrectAnswer": "O2",
+      "Points": 7,
+      "Explanation": "Binary search has a time complexity of O(log n) because it eliminates half of the search space in each iteration."
+    },
+    {
+      "Q_ID": "Q5",
+      "QuestionText": "Drag the correct term: 'A _______ is a collection of data and methods that operate on that data.'",
+      "TYPE": "DRAGDROP",
+      "Options": {
+        "O1": "Class",
+        "O2": "Method",
+        "O3": "Variable",
+        "O4": "Module"
+      },
+      "CorrectAnswer": "O1",
+      "Points": 6,
+      "Explanation": "A class in object-oriented programming encapsulates data (attributes) and methods (functions) that operate on that data."
+    },
+    {
+      "Q_ID": "Q6",
+      "QuestionText": "Which of the following are valid Python data types? (Select all that apply)",
+      "TYPE": "DROPDOWN",
+      "Options": {
+        "O1": "int",
+        "O2": "string",
+        "O3": "list",
+        "O4": "dict",
+        "O5": "boolean"
+      },
+      "CorrectAnswers": [
+        "O1",
+        "O3",
+        "O4"
+      ],
+      "Points": 12,
+      "Explanation": "In Python, valid data types include int, list, and dict. Note that Python uses 'str' for strings and 'bool' for boolean values."
+    },
+    {
+      "Q_ID": "Q7",
+      "QuestionText": "What does CPU stand for?",
+      "TYPE": "MCQ",
+      "Options": {
+        "O1": "Central Processing Unit",
+        "O2": "Computer Personal Unit",
+        "O3": "Central Program Unit",
+        "O4": "Computer Processing Unit"
+      },
+      "CorrectAnswer": "O1",
+      "Points": 4,
+      "Explanation": "CPU stands for Central Processing Unit, which is the primary component responsible for executing instructions in a computer."
+    },
+    {
+      "Q_ID": "Q8",
+      "QuestionText": "Complete the code: 'for i in _______:' to iterate through numbers 0 to 9",
+      "TYPE": "DRAGDROP",
+      "Options": {
+        "O1": "range(10)",
+        "O2": "range(0,9)",
+        "O3": "range(1,10)",
+        "O4": "range(9)"
+      },
+      "CorrectAnswer": "O1",
+      "Points": 8,
+      "Explanation": "range(10) generates numbers from 0 to 9 (10 numbers total, excluding 10)."
+    },
+    {
+      "Q_ID": "Q9",
+      "QuestionText": "Which of these are characteristics of good software design? (Select all that apply)",
+      "TYPE": "DROPDOWN",
+      "Options": {
+        "O1": "Modularity",
+        "O2": "Reusability",
+        "O3": "Maintainability",
+        "O4": "Complexity",
+        "O5": "Scalability"
+      },
+      "CorrectAnswers": [
+        "O1",
+        "O2",
+        "O3",
+        "O5"
+      ],
+      "Points": 15,
+      "Explanation": "Good software design emphasizes modularity, reusability, maintainability, and scalability. Complexity should be minimized, not maximized."
+    },
+    {
+      "Q_ID": "Q10",
+      "QuestionText": "What is the primary purpose of version control systems like Git?",
+      "TYPE": "MCQ",
+      "Options": {
+        "O1": "To compile code",
+        "O2": "To track changes and manage code versions",
+        "O3": "To debug programs",
+        "O4": "To optimize performance"
+      },
+      "CorrectAnswer": "O2",
+      "Points": 6,
+      "Explanation": "Version control systems like Git are primarily used to track changes in source code and manage different versions of a project over time."
+    }
+  ],
+  "TotalPoints": 81,
+  "PassingScore": 60,
+  "ShowCorrectAnswers": true,
+  "RandomizeQuestions": true,
+  "RandomizeOptions": true,
+  "AllowReview": true,
+  "ShowExplanations": true
+}

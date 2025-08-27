@@ -1,0 +1,287 @@
+﻿/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .body-content {
+        padding: 0;
+    }
+}
+/* In Site.css or directly in the <style> block of your .aspx pages */
+.alert-placeholder .alert {
+    color: #383d41; /* A dark grey, standard for Bootstrap alerts */
+}
+
+/* If you use specific alert types and want them to always be visible,
+   you can be more specific, but the above is a good general fix */
+.alert-success {
+    color: #155724 !important; /* Dark green */
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+}
+
+.alert-warning {
+    color: #856404 !important; /* Dark yellow */
+    background-color: #fff3cd !important;
+    border-color: #ffeaa7 !important;
+}
+
+.alert-danger {
+    color: #721c24 !important; /* Dark red */
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+}
+
+.alert-info {
+    color: #0c5460 !important; /* Dark blue */
+    background-color: #d1ecf1 !important;
+    border-color: #bee5eb !important;
+
+/* CRITICAL MESSAGE VISIBILITY FIXES */
+.alert, .status-message, .invalid-feedback, .valid-feedback {
+    position: relative !important;
+    z-index: 10000 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 15px 0 !important;
+    padding: 15px 20px !important;
+    border-radius: 5px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
+}
+
+/* Specific message container fixes */
+.login-messages, .signup-messages {
+    position: relative !important;
+    z-index: 10000 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Status message types */
+.status-success {
+    color: #155724 !important;
+    background-color: #d4edda !important;
+    border: 1px solid #c3e6cb !important;
+}
+
+.status-error {
+    color: #721c24 !important;
+    background-color: #f8d7da !important;
+    border: 1px solid #f5c6cb !important;
+}
+
+.status-warning {
+    color: #856404 !important;
+    background-color: #fff3cd !important;
+    border: 1px solid #ffeaa7 !important;
+}
+
+.status-info {
+    color: #0c5460 !important;
+    background-color: #d1ecf1 !important;
+    border: 1px solid #bee5eb !important;
+}
+
+/* Ensure all alert messages have proper styling */
+.alert {
+    padding: 0.75rem 1.25rem !important;
+    margin-bottom: 1rem !important;
+    border: 1px solid transparent !important;
+    border-radius: 0.25rem !important;
+    font-weight: 500 !important;
+}
+
+/* Fix label visibility - ensure all labels are black and readable */
+label {
+    color: #000000 !important; /* Force black color for all labels */
+    font-weight: 600 !important; /* Make labels bold */
+}
+
+/* Override any theme-specific label colors */
+.text-gray-700,
+.block.text-gray-700 {
+    color: #000000 !important; /* Force black for gray text */
+}
+
+/* Ensure form labels are always visible */
+.form-group label,
+.control-label,
+label[for] {
+    color: #000000 !important;
+    font-weight: 600 !important;
+    display: block !important;
+    margin-bottom: 5px !important;
+}
+
+/* Fix label visibility issues */
+label {
+    color: #000000 !important; /* Black color for all labels */
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+}
+
+/* Form control labels */
+.form-label {
+    color: #000000 !important;
+    font-weight: 500 !important;
+}
+
+/* Specific label styling for forms */
+.text-gray-700 {
+    color: #374151 !important; /* Dark gray instead of light gray */
+}
+
+/* Bootstrap label overrides */
+.col-form-label {
+    color: #000000 !important;
+}
+
+/* Validator error styling */
+.validator-error {
+    color: #dc3545 !important;
+    font-size: 0.875rem !important;
+    margin-top: 0.25rem !important;
+    display: block !important;
+}
+
+/* Enhanced Alert Message Styling with High Z-Index */
+.alert {
+    padding: 0.75rem 1.25rem !important;
+    margin-bottom: 1rem !important;
+    border: 1px solid transparent !important;
+    border-radius: 0.25rem !important;
+    font-weight: 500 !important;
+    position: relative !important;
+    z-index: 9999 !important; /* High z-index to appear above other elements */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Success Messages - Green */
+.alert-success {
+    color: #155724 !important; /* Dark green text */
+    background-color: #d4edda !important; /* Light green background */
+    border-color: #c3e6cb !important; /* Green border */
+    box-shadow: 0 2px 4px rgba(21, 87, 36, 0.15) !important;
+}
+
+/* Error/Danger Messages - Red */
+.alert-danger, .alert-error {
+    color: #721c24 !important; /* Dark red text */
+    background-color: #f8d7da !important; /* Light red background */
+    border-color: #f5c6cb !important; /* Red border */
+    box-shadow: 0 2px 4px rgba(114, 28, 36, 0.15) !important;
+}
+
+/* Warning Messages - Yellow */
+.alert-warning {
+    color: #856404 !important; /* Dark yellow text */
+    background-color: #fff3cd !important; /* Light yellow background */
+    border-color: #ffeaa7 !important; /* Yellow border */
+    box-shadow: 0 2px 4px rgba(133, 100, 4, 0.15) !important;
+}
+
+/* Info Messages - Blue */
+.alert-info {
+    color: #0c5460 !important; /* Dark blue text */
+    background-color: #d1ecf1 !important; /* Light blue background */
+    border-color: #bee5eb !important; /* Blue border */
+    box-shadow: 0 2px 4px rgba(12, 84, 96, 0.15) !important;
+}
+
+/* Bootstrap validation feedback */
+.invalid-feedback, .valid-feedback {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 0.25rem !important;
+    font-size: 0.875em !important;
+    font-weight: 600 !important;
+    position: relative !important;
+    z-index: 10000 !important;
+}
+
+.invalid-feedback {
+    color: #dc3545 !important;
+}
+
+.valid-feedback {
+    color: #28a745 !important;
+}
+
+/* Status messages with high visibility */
+.status-message {
+    padding: 15px 20px !important;
+    margin: 15px 0 !important;
+    border-radius: 5px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    position: relative !important;
+    z-index: 10000 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
+}
+
+/* Success status */
+.status-success {
+    color: #155724 !important;
+    background-color: #d4edda !important;
+    border: 2px solid #28a745 !important;
+}
+
+/* Error status */
+.status-error, .status-danger {
+    color: #721c24 !important;
+    background-color: #f8d7da !important;
+    border: 2px solid #dc3545 !important;
+}
+
+/* Login/Signup message containers */
+.login-messages, .signup-messages {
+    position: relative !important;
+    z-index: 9999 !important;
+    margin: 10px 0 !important;
+}
+
+/* Confirmation page styling */
+.confirmation-message {
+    text-align: center !important;
+    padding: 30px 20px !important;
+    margin: 20px 0 !important;
+    border-radius: 8px !important;
+    position: relative !important;
+    z-index: 10000 !important;
+}
+
+.confirmation-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%) !important;
+    border: 2px solid #28a745 !important;
+    color: #155724 !important;
+}
+
+.confirmation-error {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%) !important;
+    border: 2px solid #dc3545 !important;
+    color: #721c24 !important;
+}
+
+

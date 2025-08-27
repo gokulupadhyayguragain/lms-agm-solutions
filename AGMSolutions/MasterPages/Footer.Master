@@ -1,0 +1,8 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Footer.master.cs" Inherits="AGMSolutions.MasterPages.Footer" %>
+
+<%-- No DOCTYPE, html, head, or body tags --%>
+<div class="footer">
+    <div class="container">
+        <p>&copy; <%: DateTime.Now.Year %> - AGM Solutions. All rights reserved.</p>
+    </div>
+</div>

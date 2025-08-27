@@ -1,0 +1,41 @@
+{
+  "quizTitle": "Computer Science Basics",
+  "totalQuestions": 4,
+  "timeLimit": 25,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Which programming language is primarily used for web development?",
+      "options": ["Python", "JavaScript", "C++", "Java"],
+      "correct": 1
+    },
+    {
+      "id": 2,
+      "type": "dragdrop",
+      "question": "Match the data structures with their characteristics:",
+      "items": ["Array", "Stack", "Queue", "Linked List"],
+      "targets": ["Fixed size, indexed access", "LIFO principle", "FIFO principle", "Dynamic size, pointer-based"],
+      "correct": [0, 1, 2, 3]
+    },
+    {
+      "id": 3,
+      "type": "dropdown",
+      "question": "The time complexity of binary search is:",
+      "options": ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+      "correct": 1
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "In object-oriented programming, what does 'inheritance' mean?",
+      "options": [
+        "Creating multiple instances of a class",
+        "Hiding internal implementation details",
+        "A class acquiring properties of another class",
+        "Overloading methods with different parameters"
+      ],
+      "correct": 2
+    }
+  ]
+}
